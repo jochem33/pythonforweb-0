@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="formdivdiv">
+    <div class="formdiv">
+      <form id="carttable" class="formtable" action="/checkout" method="POST">
+
+        <div class="tablerow">
+          <input type="submit" class="buybutton button cartbutton" value="afrekenen">
+          <a href="#" onclick="clearcart();" class="readbutton button cartbutton">Clear Cart</a>
+        </div>
+      </form>
+
+      <!-- <div class="buttons">
+        <a href="#" onclick="clearcart();" class="readbutton button">Clear Cart</a>
+      </div> -->
+
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Latte Online | Cart</title>
+    <link rel="stylesheet" href="static/style/style.css">
+  </head>
+  <body>
+
+    <header class="menubalk">
+
+      <a href="shop.html" class="sitetitle">Latte Online</a>
+
+      <div class="">
+        <a class="mylatte" href="mylatte.html">
+          <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+          <p class="mylatte_txt">My Latte Online</p>
+        </a>
+
+        <a class="mylatte" onclick="">
+          <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+          <p class="mylatte_txt">Winkelwagen <span id="inwinkelwagen">0</span></p>
+        </a>
+      </div>
+
+    </header>
+
+    <ul id="carttable">
+      <li></li>
+    </ul>
+
+    <div class="buttons">
+      <a href="#" onclick="alert('deze functie is helaas nog niet beschikbaar')" class="buybutton button">Afrekenen</a>
+      <a href="#" onclick="clearcart();"class="readbutton button">Clear Cart</a>
+    </div>
+
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript">
+      printcart();
+    </script>
+  </body>
+</html>

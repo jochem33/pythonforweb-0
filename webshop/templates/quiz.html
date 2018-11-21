@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <title>quiz</title>
+          <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+    <body>
+        <h1>SuPEr CoOlE qUiZ</h1>
+        <form action="/verwerk" method="post">
+            <div class="formdiv">
+                <label for="hoofdstad">Wat is de hoofdstad van Zweden?</label>
+                <input type="text" name="hoofdstad" id="hoofdstad" placeholder="stad">
+            </div>
+            <div class="formdiv">
+                <label for="inch">Hoeveel centimeter is een inch?</label>
+                <input type="radio" name="inch" id="inch" value="3,22"> 3,22 cm <br>
+                <input type="radio" name="inch" id="inch" value="2,54"> 2,54 cm <br>
+                <input type="radio" name="inch" id="inch" value="2,56"> 2,56 cm
+            </div>
+            <div class="formdiv">
+                <label for="dippje">Met welke van de volgende dingen kan je (lekker) dippen?</label>
+                <input type="checkbox" name="dippje1"  value="komkommer"> Komkommer <br>
+                <input type="checkbox" name="dippje2"  value="chipje"> Chipje <br>
+                <input type="checkbox" name="dippje3"  value="stick"> Stick
+            </div>
+            <div class="formdiv">
+                <label for="belevenis">Hoe voelde je tijdens het maken van deze quiz?</label>
+                <textarea rows="4" cols="50" id="belevenis" placeholder="Ik voelde mij..."></textarea>
+            </div>
+            <div class="formdiv">
+                <input type="submit" name="lever in" value="lever in">
+            </div>
+        </form>
+    </body>
+</html>

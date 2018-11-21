@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="formdivdiv">
+      <div class="formdiv">
+        <h1>Log In</h1>
+        <form action="/login" method="post" class="formtable">
+            {{ form.hidden_tag() }}
+            <div class="tablerow">
+                {{ form.username.label }}
+                {{ form.username(size=32, class_="aantalincart") }}
+            </div>
+            <div class="tablerow">
+                {{ form.password.label }}
+                {{ form.password(size=32, class_="aantalincart") }}
+            </div>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <p>{{ form.submit(class_="buybutton button") }}</p>
+
+            {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </form>
+      </div>
+    </div>
+{% endblock %}

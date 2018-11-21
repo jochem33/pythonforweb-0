@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Latte Online | Shop</title>
+    <link rel="stylesheet" href="static/style/style.css">
+  </head>
+  <body>
+
+    <header class="menubalk">
+
+      <a href="shop.html" class="sitetitle">Latte Online</a>
+
+      <div class="">
+        <a class="mylatte" href="mylatte.html">
+          <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+          <p class="mylatte_txt">My Latte Online</p>
+        </a>
+
+        <a class="mylatte" href="cart.html">
+          <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+          <p class="mylatte_txt">Winkelwagen <span id="inwinkelwagen">0</span></p>
+        </a>
+      </div>
+
+    </header>
+
+    <section class="productbox">
+
+      <div class="product">
+        <img src="static/mocha.jpg" alt="mochacino" class="product_img">
+        <h1 class="product_title">Caffè mocha</h1>
+        <p class="product_txt">Caffè latte met een touch van chocola.</p>
+
+        <div class="buttons">
+          <a href="#" onclick="addtocart('mocha')" class="buybutton button">In winkelwagen</a>
+          <a href="#" class="readbutton button">Read more</a>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <img src="static/pumpkin.jpg" alt="pumpkin" class="product_img">
+        <h1 class="product_title">Latte Pumpkin spice</h1>
+        <p class="product_txt">Koffie met kaneel, melk en aftetopt met slagroom en pumpkin spice.</p>
+
+        <div class="buttons">
+          <a href="#" onclick="addtocart('pumpkin')" class="buybutton button">In winkelwagen</a>
+          <a href="#" class="readbutton button">Read more</a>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <img src="static/macchiato.jpg" alt="macchiato" class="product_img">
+        <h1 class="product_title">Latte Macchiato</h1>
+        <p class="product_txt">Laagjes koffie en melk, eventueel cacao poeder.</p>
+
+        <div class="buttons">
+          <a href="#" onclick="addtocart('macchiato')" class="buybutton button">In winkelwagen</a>
+          <a href="#" class="readbutton button">Read more</a>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <img src="static/kroket.jpg" alt="kroket" class="product_img">
+        <h1 class="product_title">Latte Krokecino</h1>
+        <p class="product_txt">Een verfijnde italiaanse koffie met stukje qroqeute.</p>
+
+        <div class="buttons">
+          <a href="#" onclick="addtocart('kroket')" class="buybutton button">In winkelwagen</a>
+          <a href="#" class="readbutton button">Read more</a>
+        </div>
+
+      </div>
+
+    </section>
+
+  <script type="text/javascript" src="static/js/main.js"></script>
+  </body>
+</html>

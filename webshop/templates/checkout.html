@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="formdivdiv">
+      <div class="formdiv">
+        <h1>Log In</h1>
+        <form action="/login" method="post" class="formtable">
+            {{ form.hidden_tag() }}
+            <div class="tablerow">
+                {{ form.fullname.label }}
+                {{ form.fullname(size=32, class_="aantalincart") }}
+            </div>
+            <div class="tablerow">
+                {{ form.street.label }}
+                {{ form.street(size=32, class_="aantalincart") }}
+            </div>
+            <div class="tablerow">
+                {{ form.housenumber.label }}
+                {{ form.housenumber(size=32, class_="aantalincart") }}
+            </div>
+            <div class="tablerow">
+                {{ form.zipcode.label }}
+                {{ form.zipcode(size=7, class_="aantalincart") }}
+            </div>
+            <div class="tablerow">
+                {{ form.city.label }}
+                {{ form.city(size=60, class_="aantalincart") }}
+            </div>
+            <div class="tablerow">
+                {{ form.country.label }}
+                {{ form.country(size=32, class_="aantalincart") }}
+            </div>
+
+            <div class="tablerow">
+                {{ form.email.label }}
+                {{ form.emai(size=32, class_="aantalincart") }}
+            </div>
+
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <p>{{ form.submit(class_="buybutton button") }}</p>
+
+            {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </form>
+      </div>
+    </div>
+{% endblock %}

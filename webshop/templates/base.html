@@ -1,0 +1,36 @@
+<html>
+    <head>
+      {% if subtitle %}
+        <title>Latte Online | {{ subtitle }} </title>
+      {% else %}
+        <title>Latte Online</title>
+      {% endif %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    </head>
+    <body>
+
+      <header class="menubalk">
+
+        <a href="/" class="sitetitle">Latte Online</a>
+
+        <div class="">
+          <a class="mylatte" href="/login">
+            <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+            <p class="mylatte_txt">Log in</p>
+          </a>
+
+          <a class="mylatte" href="/cart">
+            <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+            <p class="mylatte_txt">Winkelwagen <span id="inwinkelwagen">0</span></p>
+          </a>
+        </div>
+
+      </header>
+
+
+      {% block content %}
+
+      {% endblock %}
+      <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
