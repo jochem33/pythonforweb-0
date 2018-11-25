@@ -12,4 +12,4 @@ class Checkoutform(FlaskForm):
     country = StringField('Country', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     send = BooleanField('Send')
-    submit = SubmitField('Buy')
+    buybuttonjs = SubmitField('Buy')

@@ -3,45 +3,48 @@
 {% block content %}
     <div class="formdivdiv">
       <div class="formdiv">
-        <h1>Log In</h1>
-        <form action="/login" method="post" class="formtable">
+        <h1>Personal Data</h1>
+        <form action="/checkout" method="post" class="formtable" id="checkoutformid" name="checkoutformid">
             {{ form.hidden_tag() }}
             <div class="tablerow">
-                {{ form.fullname.label }}
+                {{ form.fullname.label(class="formlabel") }}
                 {{ form.fullname(size=32, class_="aantalincart") }}
             </div>
             <div class="tablerow">
-                {{ form.street.label }}
+                {{ form.street.label(class="formlabel") }}
                 {{ form.street(size=32, class_="aantalincart") }}
             </div>
             <div class="tablerow">
-                {{ form.housenumber.label }}
+                {{ form.housenumber.label(class="formlabel") }}
                 {{ form.housenumber(size=32, class_="aantalincart") }}
             </div>
             <div class="tablerow">
-                {{ form.zipcode.label }}
+                {{ form.zipcode.label(class="formlabel") }}
                 {{ form.zipcode(size=7, class_="aantalincart") }}
             </div>
             <div class="tablerow">
-                {{ form.city.label }}
+                {{ form.city.label(class="formlabel") }}
                 {{ form.city(size=60, class_="aantalincart") }}
             </div>
             <div class="tablerow">
-                {{ form.country.label }}
-                {{ form.country(size=32, class_="aantalincart") }}
+                {{ form.country.label(class="formlabel") }}
+                {{ form.country(size=32, class_="aantalincart", id="landinput") }}
             </div>
 
             <div class="tablerow">
-                {{ form.email.label }}
-                {{ form.emai(size=32, class_="aantalincart") }}
+                {{ form.email.label(class="formlabel") }}
+                {{ form.email(size=32, class_="aantalincart") }}
             </div>
 
-            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-            <p>{{ form.submit(class_="buybutton button") }}</p>
-
-            {% for error in form.password.errors %}
-                <span style="color: red;">[{{ error }}]</span>
+            {% for error in form.email.errors %}
+                <span id="errormessage" style="color: red;">[{{ error }}]</span>
             {% endfor %}
+
+
+
+            <p">{{ form.send() }} {{ form.send.label }}</p>
+            <p style="display: none;">{{ form.buybuttonjs(class_="buybutton button") }}</p>
+            <button type="button" class="buybutton button" onclick="checkcountry();">Buy</button>
         </form>
       </div>
     </div>

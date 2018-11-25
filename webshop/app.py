@@ -40,8 +40,11 @@ def checkout():
 
     if form.validate_on_submit():
         return redirect('/bought')
-    return render_template('checkout.html', subtitle='Sign In', form=form)
+    return render_template('checkout.html', subtitle='Checkout', form=form)
 
 
+@app.route('/bought')
+def bought():
+    return render_template('bought.html', subtitle='succes')
 
 app.run(debug=True)

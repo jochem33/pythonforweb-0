@@ -229,6 +229,10 @@ table {
 	/* border: 1px solid #c6c6c6; */
 }
 
+.formlabel {
+	display: table-cell;
+}
+
 .aantalincart {
 	display: table-cell;
 	height: 5vh;
