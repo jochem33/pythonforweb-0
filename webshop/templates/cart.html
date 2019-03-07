@@ -3,11 +3,19 @@
 {% block content %}
   <div class="formdivdiv">
     <div class="formdiv">
-      <form id="carttable" class="formtable" action="/checkout" method="POST">
-
+      <form id="carttable" class="formtable" method="POST">
         <div class="tablerow">
-          <input type="submit" class="buybutton button cartbutton" value="afrekenen">
-          <a href="#" onclick="clearcart();" class="readbutton button cartbutton">Clear Cart</a>
+          {% if price %}
+            <p>total: €{{ (price * btw)|round(2, 'common') }}</p>
+          {% endif %}
+        </div>
+        <p class="line"></p>
+        <div class="tablerow">
+          <!-- <input type="submit" class="buybutton button cartbutton" value="afrekenen"> -->
+          <a href="#" onclick="clearcart();" class="readbutton button cartbutton">Clear cart</a>
+          <input type="submit" class="buybutton button cartbutton" value="Afrekenen" onclick="javascript: form.action='/checkout';">
+          <input type="submit" class="readbutton button cartbutton" value="Prijs bereken" onclick="javascript: form.action='/cart/';">
+          
         </div>
       </form>
 

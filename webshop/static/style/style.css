@@ -117,8 +117,9 @@ table {
 
 
 .productbox {
-  display: flex;
-  justify-content: space-around;
+	width: 100vw;
+  	display: flex;
+  	justify-content: space-around;
 }
 
 .product {
@@ -248,4 +249,12 @@ table {
 
 .cartbutton {
 	display: table-cell;
+}
+
+
+
+.line {
+	border-bottom: 3px solid black;
+	width: 30vw;
+	/* margin: 2vw 0 2vw 0; */
 }

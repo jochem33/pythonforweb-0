@@ -45,7 +45,7 @@ function printcart() {
    console.log(cartdict);
 
    for (var key in cartdict) {
-     table.innerHTML = "<div class=\"tablerow\"><label class=\"cartlabel\" for=\"" + key + "\">" + key + "</label><input class=\"aantalincart\" type=\"number\" name=\"points\" step=\"1\" value=\"" + cartdict[key] + "\"></div>" + table.innerHTML;
+     table.innerHTML = "<div class=\"tablerow\"><label class=\"cartlabel\" for=\"" + key + "\">" + key + "</label><input class=\"aantalincart\" type=\"number\" name=\"" + key + "\" step=\"1\" value=\"" + cartdict[key] + "\" id=\"" + key + "\"></div>" + table.innerHTML;
    }
 
 }
