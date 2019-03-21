@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+
+
+#container {
+    display: grid;
+    grid-template-areas: "bovenarea"
+                         "sidearea"
+                         "midden1";
+}
+
+.menubalk {
+    grid-area: bovenarea;
+    border-bottom: 1px solid #cecece;
+}
+
+.sidebar {
+    grid-area: sidearea;
+
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    padding: 2vw;
+    margin: 2vw;
+}
+
+.productbox {
+    grid-area: midden1;
+}
+
+
+
+.product {
+    width: 80vw;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    padding: 2vw;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+
+.product_img {
+    width: 80vw;
+    height: 80vw;
+    object-fit: cover;
+}
+
+
+
+@media only screen and (orientation: landscape) {
+    .productbox {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 3fr 3fr;
+    }   
+
+
+    .product {
+        width: 19vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .product_img {
+        width: 19vw;
+        height: 19vw;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 10fr;
+        grid-template-areas: "bovenarea bovenarea"
+                             "sidearea midden1";
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+
+    .productbox {
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }   
+
+
+    .product {
+        width: 67vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        height: 54vh;
+    }
+
+    .product_img {
+        width: 30vh;
+        height: 50vh;
+        float: left;
+        margin: 2vw;
+        margin-right: 4vw;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 10fr;
+        grid-template-areas: "bovenarea bovenarea"
+                             "sidearea midden1";
+    }
+}
+
+
+
+
+
+
+
+.product_title {
+    font-family: Roboto, Times, serif;
+}
+
+
+
+
+
+.sitetitle {
+    font-size: 50;
+    font-family: Orbitron, Times, serif;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 100vw;
+    display: block;
+}
+
+
+
+.mylatte_txt {
+    background: linear-gradient(to right, #e8041b, #e86a04);
+    width: 40vw;
+    padding: 2vw;
+    float: left;
+    margin: 2vw;
+    border-radius: 10px;
+    color: white;
+    font-family: Roboto, Times, serif;
+    text-align: center;
+    height: 8vw;
+}
+
+#inwinkelwagen {
+    background-color: white;
+    color: black;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 3vw;
+}

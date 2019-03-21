@@ -5,33 +5,40 @@
       {% else %}
         <title>Latte Online</title>
       {% endif %}
-      <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
+
+      <link rel="stylesheet" href="{{ url_for('static', filename='style/style2.css') }}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
+      <div id="container">
 
-      <header class="menubalk">
+        <header class="menubalk">
 
-        <a href="/" class="sitetitle">Latte Online</a>
+          <a href="/" class="sitetitle">Latte Online</a>
 
-        <div class="">
-          <a class="mylatte" href="/login">
-            <!-- <img class="mylatte_img" src="static/mylatte.png" -->
-            <p class="mylatte_txt">Log in</p>
-          </a>
+          <div class="">
+            <a class="mylatte" href="/login">
+              <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+              <p class="mylatte_txt">Log in</p>
+            </a>
 
-          <a class="mylatte" href="/cart">
-            <!-- <img class="mylatte_img" src="static/mylatte.png" -->
-            <p class="mylatte_txt">Cart <span id="inwinkelwagen">0</span></p>
-          </a>
-        </div>
+            <a class="mylatte" href="/cart">
+              <!-- <img class="mylatte_img" src="static/mylatte.png" -->
+              <p class="mylatte_txt">Cart <span id="inwinkelwagen">0</span></p>
+            </a>
+          </div>
 
-      </header>
+        </header>
 
 
-      {% block content %}
+        {% block content %}
 
-      {% endblock %}
-      <script type="text/javascript" src="{{ url_for('static', filename='js/landenlijst.js') }}"></script>
-      <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+        {% endblock %}
+        <script type="text/javascript" src="{{ url_for('static', filename='js/landenlijst.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+      </div>
     </body>
 </html>

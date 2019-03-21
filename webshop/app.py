@@ -29,7 +29,7 @@ def homebtw(btwtrue):
     if btwtrue == "true":
         return render_template('index.html', pricing=pricing, btw=btw)
     if btwtrue == "false":
-        return render_templ4ate('index.html', pricing=pricing, btw=1)
+        return render_template('index.html', pricing=pricing, btw=1)
     else:
         return render_template('index.html', pricing=pricing, btw=btw)
 
